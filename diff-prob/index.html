@@ -9,29 +9,47 @@
         <title>Laboratory for Progress</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="../assets/css/main.css" />
-        <link rel="shortcut icon" type="image/png" href="../images/logo/LFP_logo_final_JustHand_Blue.png"/>
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="stylesheet" href="assets/ws.css" />
+        <link rel="shortcut icon" type="image/png" href="/images/logo/LFP_logo_final_JustHand_Blue.png"/>
 
     </head>
     <body class="homepage is-preload">
         <div id="page-wrapper">
 
             <section id="header">
-                <!-- Logo -->
-                <div class="logo"><a href="https://progress.eecs.umich.edu/"><img src="images/IROS-LOGO.svg" alt="" /></a></div>
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#abstract">Abstract</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#program">Program</a></li>
+                        <li><a href="#organizers">Organizers</a></li>
+                    </ul>
+                </nav>
             </section>
 
             <section id="main">
+
+                <section id="banner">
+                    <header>
+                        <h2>Differentiable Probabilistic Robotics:<br/>
+                            Emerging Perspectives on Robot Learning
+                        </h2>
+                        <p>IROS 2023 Workshop</p>
+                    </header>
+
+                    <div class="logo"><a href="#"><img src="images/IROS-LOGO.svg" alt="" /></a></div>
+                </section>
+
                 <div class="container">
 
                     <!-- Content -->
-                    <article class="box post project">
+                    <article id="abstract" class="box post">
                         <!-- TITLE -->
                         <header>
-                            <h2>Differentiable Probabilistic Robotics:<br/>
-                                Emerging Perspectives on Robot Learning
-                            </h2>
-                            <p><font size="+2">IROS 2023 Workshop</font></p>
+                            <h2>Abstract</h2>
+                            <!-- <p><font size="+2">IROS 2023 Workshop</font></p> -->
                         </header>
 
                         <!-- Path to a pitch image. Can be removed if not needed.
@@ -48,7 +66,7 @@
                         <!-- ABSTRACT -->
                         <!-- If your pitch figure is wide and you want the abstract to match, add the class "wide" next
                              to the class "abstract" below.-->
-                        <div class="abstract">
+                        <div>
                             <p>
                                 Advances in deep learning in recent years have yielded outstanding performance across robotic tasks, compelling roboticists to reexamine the role of long-standing, reliable probabilistic inference algorithms. Probabilistic methods have a long history of enabling effective operation under uncertain and unstructured environments. Robot learning, on the other hand, promises generalizability, eliminating the need for carefully hand-crafted models required in many classical probabilistic algorithms. However, it remains unclear whether we can achieve reliable, adaptable behavior by relying on data alone. This workshop sets out to address the question: How can roboticists achieve the best of both deep learning and probabilistic inference? Recently, the robotics community has seen an emergence of interest in hybrid methods which incorporate learning algorithms within probabilistic frameworks to exploit the benefits of both underlying model classes. This workshop aims to connect researchers working at the intersection of robotics, deep learning, and probabilistic inference to facilitate breakthrough research in these areas.
                             </p>
@@ -56,16 +74,33 @@
 
                     </article>
 
-                </div>
-            </section>
+                    <!-- Speakers -->
+                    <article id="speakers" class="box post">
+                        <!-- TITLE -->
+                        <header>
+                            <h2>Speakers</h2>
+                        </header>
 
-            <section id="main">
-                <div class="container">
+                        <p>Coming soon!</p>
+
+                    </article>
+
+                    <!-- Program -->
+                    <article id="program" class="box post">
+                        <!-- TITLE -->
+                        <header>
+                            <h2>Program</h2>
+                        </header>
+
+                        <p>Coming soon!</p>
+
+                    </article>
+
                     <div class="row">
                         <div class="col-12">
 
                             <!-- Members -->
-                            <section>
+                            <section id="organizers">
                                 <header class="major">
                                     <h2>Organizers</h2>
                                 </header>
@@ -150,14 +185,25 @@
                 <!-- Copyright -->
                 <div id="copyright">
                     <ul class="links">
-                        <li>&copy; 2023. All rights reserved.</li><li>Design: Dopetrope by
-                    <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
+                        <li>&copy; 2023. All rights reserved.</li>
+                        <!-- <li>Design: Dopetrope by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li> -->
                     </ul>
                 </div>
 
             </section>
 
         </div>
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/jquery.dropotron.min.js"></script>
+        <script src="/assets/js/browser.min.js"></script>
+        <script src="/assets/js/breakpoints.min.js"></script>
+        <script src="/assets/js/util.js"></script>
+        <script src="/assets/js/carousel.js"></script>
+        <script src="/assets/js/main.js"></script>
+        <script src="assets/jquery.scrollex.min.js"></script>
+        <script src="assets/jquery.scrolly.min.js"></script>
+        <script src="assets/main.js"></script>
 
     </body>
 </html>
