@@ -67,6 +67,10 @@
     padding: 1em 0;
 }
 
+#navPanel {
+    background: #9FD5B3;
+}
+
 div.person:hover h3 {
 	color: #289989;
 }
