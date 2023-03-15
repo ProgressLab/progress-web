@@ -75,6 +75,14 @@ div.person:hover h3 {
 	color: #289989;
 }
 
+.program {
+    margin: 0 2.5em;
+}
+tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+
 /* XLarge */
 @media screen and (max-width: 1680px) {
     #main {
