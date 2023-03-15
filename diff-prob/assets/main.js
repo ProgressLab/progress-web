@@ -85,12 +85,8 @@
 		$('.scrolly').scrolly({
 			speed: 1000,
 			offset: function() {
-
-				if (breakpoints.active('<=medium'))
-					return $titleBar.height();
-
-				return 0;
-
+				// Add offset to the top of links equal to the height of the fixed header.
+				return $header.outerHeight();
 			}
 		});
 
