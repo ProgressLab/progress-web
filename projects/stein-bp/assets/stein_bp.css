@@ -34,3 +34,7 @@
 .image.centered.experiment {
   margin: 0 auto 0em auto;
 }
+
+.box.post h3 {
+  margin: 1em 0;
+}
