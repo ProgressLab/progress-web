@@ -26,17 +26,17 @@ class Carousel {
     });
 
     // Add the arrows.
-    var $prev = $('<a>').text('<');  // U+0276E
+    var $prev = $('<a>').text('\u2770');
     $prev.addClass('prev');
     $prev.click(() => {
-      this.plusSlides(-1);
+      this.plusSlides(-1);  // Decrease the slide count on click.
     });
     $('#' + this.div_id).append($prev);
 
-    var $next = $('<a>').text('>');  // &#10095;
+    var $next = $('<a>').text('\u2771');
     $next.addClass('next');
     $next.click(() => {
-      this.plusSlides(1);
+      this.plusSlides(1);  // Increase the slide count on click.
     });
     $('#' + this.div_id).append($next);
   }
@@ -45,7 +45,7 @@ class Carousel {
     this.updateCarousel(0);
   }
 
-  // Next/previous controls
+  // Add the desired quantity to the index.
   plusSlides(n) {
     clearTimeout(this.timeout);
     this.slideIndex += n;

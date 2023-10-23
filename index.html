@@ -42,29 +42,18 @@
                             <h3>The Laboratory for Perceptive Robotics and Grounded Reasoning Systems</h3>
                         </header>
 
-                        <div class="slideshow-container">
-                            <div class="image-slideshow-container">
-                                <div class="image slideshow"><img src="images/slideshow/chad_fetch.jpg" alt="" /></div>
-                                <div class="image slideshow"><img src="images/slideshow/bbb_stairs.jpg" alt="" /></div>
-                                <div class="image slideshow"><img src="images/slideshow/icra2022.jpg" alt="" /></div>				
-                                <div class="image slideshow"><img src="images/slideshow/icra2019.png" alt="" /></div>
-                                <!-- <div class="image slideshow"><img src="images/slideshow/zhiqiang_dinner.png" alt="" /></div> -->
-
-                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div class="slideshow-wrapper">
+                            <div class="slideshow-container" id="slideshow">
+                                <!-- Add or remove pictures for the slideshow here. -->
+                                <div class="image slide"><img src="images/slideshow/chad_fetch.jpg" alt="" /></div>
+                                <div class="image slide"><img src="images/slideshow/bbb_stairs.jpg" alt="" /></div>
+                                <div class="image slide"><img src="images/slideshow/icra2022.jpg" alt="" /></div>
+                                <div class="image slide"><img src="images/slideshow/icra2019.png" alt="" /></div>
                             </div>
 
                             <!-- The dots/circles -->
-                            <div style="text-align:center">
-                              <span class="dot" onclick="currentSlide(1)"></span>
-                              <span class="dot" onclick="currentSlide(2)"></span>
-                              <span class="dot" onclick="currentSlide(3)"></span>
-                              <span class="dot" onclick="currentSlide(4)"></span>      
-                            </div>
+                            <div class="dots-container" id="slideshow-selector"></div>
                         </div>
-                        <!-- <br> -->
-
-
 
                         <p>
                             The Laboratory for Progress (Perceptive RObotics and Grounded REasoning SystemS) aims to discover methods for computational reasoning and perception that will enable robots to effectively assist people in common human environments. Our goal is to make the physical world programmable through robots. This research pertains primarily to interactive robotics with contributions the technology of robot perception and mobile manipulation as well as the usability of this technology by people in real situations. Because science is exactly independently verifiable knowledge, open-source contributions and reproducibility are critical features of our work.
@@ -101,7 +90,7 @@
                 <!-- Copyright -->
                 <div id="copyright">
                     <ul class="links">
-                        <li>&copy; 2022. All rights reserved.</li><li>Design: Dopetrope by
+                        <li>&copy; 2023. All rights reserved.</li><li>Design: Dopetrope by
                     <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
                     </ul>
                 </div>
@@ -118,6 +107,14 @@
         <script src="assets/js/util.js"></script>
         <script src="assets/js/carousel.js"></script>
         <script src="assets/js/main.js"></script>
+
+        <script>
+            var carousel = new Carousel();
+
+            (function($) {
+                carousel.start();
+            })(jQuery);
+        </script>
 
     </body>
 </html>
