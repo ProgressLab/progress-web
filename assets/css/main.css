@@ -1676,18 +1676,30 @@ input, select, textarea {
 
 /* Slideshow */
 
-.slideshow-container {
+.slideshow-wrapper {
 	margin-bottom: 1em;
 	text-align: center;
 }
 
-.image-slideshow-container {
+.slideshow-container {
 	display: inline-block;
 	max-width: 90%;
 	position: relative;
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.slideshow-container .slide {
+	display: none;
+}
+
+.slideshow-container .slide.active{
+	display: block;
+}
+
+.dots-container {
+	text-align: center;
 }
 
 .prev, .next {
@@ -2697,7 +2709,7 @@ li:hover a {
 
 		/* Slideshow */
 
-		.image-slideshow-container {
+		.slideshow-container {
 			max-width: 100%;
 		}
 

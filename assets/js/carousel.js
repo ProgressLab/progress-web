@@ -3,52 +3,71 @@
 */
 
 class Carousel {
-  constructor(div_id = "slideshow", dot_id = "dot", switchTimeout = 5000) {
+  constructor(div_id = "slideshow", dot_id = "slideshow-selector", switchTimeout = 5000) {
     this.slideIndex = 1;
     this.timeout = null;
     this.div_id = div_id;
     this.dot_id = dot_id;
 
     this.switchTimeout = switchTimeout;
+
+    var $imgs = $('#' + this.div_id + ' .slide');
+
+    // Add dots for selection.
+    $imgs.each((index) => {
+      var $span = $('<span>');
+      $span.addClass('dot')
+      if(index === 0) { $span.addClass('active'); }
+      $span.click(() => {
+        clearTimeout(this.timeout);
+        this.updateCarousel(index);
+      });
+      $('#' + this.dot_id).append($span);
+    });
+
+    // Add the arrows.
+    var $prev = $('<a>').text('<');  // U+0276E
+    $prev.addClass('prev');
+    $prev.click(() => {
+      this.plusSlides(-1);
+    });
+    $('#' + this.div_id).append($prev);
+
+    var $next = $('<a>').text('>');  // &#10095;
+    $next.addClass('next');
+    $next.click(() => {
+      this.plusSlides(1);
+    });
+    $('#' + this.div_id).append($next);
   }
 
-// Next/previous controls
+  start() {
+    this.updateCarousel(0);
+  }
+
+  // Next/previous controls
   plusSlides(n) {
     clearTimeout(this.timeout);
     this.slideIndex += n;
-    this.carousel(this.slideIndex);
+    this.updateCarousel(this.slideIndex);
   }
 
-  // Thumbnail image controls
-  currentSlide(n) {
-  	clearTimeout(this.timeout);
-  	this.slideIndex = n;
-    this.carousel(this.slideIndex);
-  }
-
-  carousel(n) {
-    var i;
-    var x = document.getElementsByClassName(this.div_id);
-    var dots = document.getElementsByClassName(this.dot_id);
-    if (x.length === 0) {
+  updateCarousel(n) {
+    var $imgs = $('#' + this.div_id + ' .slide');
+    var $dots = $('#' + this.dot_id + ' .dot');
+    if ($imgs.length === 0) {
     	return;
     }
 
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-
     this.slideIndex = n;
-    if (this.slideIndex > x.length) { this.slideIndex = 1; }
-    if (this.slideIndex < 1) { this.slideIndex = x.length; }
+    if (this.slideIndex >= $imgs.length) { this.slideIndex = 0; }
+    if (this.slideIndex < 0) { this.slideIndex = $imgs.length - 1; }
 
-    x[this.slideIndex-1].style.display = "block";
-    dots[this.slideIndex-1].className += " active";
+    $imgs.removeClass('active');
+    $dots.removeClass('active');
+    $imgs.eq(this.slideIndex).addClass('active');
+    $dots.eq(this.slideIndex).addClass('active');
 
-    this.timeout = setTimeout(() => this.carousel(this.slideIndex + 1), this.switchTimeout); // Change image every 5 seconds
+    this.timeout = setTimeout(() => this.updateCarousel(this.slideIndex + 1), this.switchTimeout); // Change image every 5 seconds
   }
 }

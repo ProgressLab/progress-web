@@ -125,26 +125,17 @@
                             We are able to recover the configuration and refine the 6 DoF pose using SGD over the gradients of the NARF model.
                         </p>
 
-                        <div class="slideshow-container">
-                            <div class="image-slideshow-container">
-                                <div class="image slideshow"><img src="images/pose/3_config.gif" alt="" /></div>
-                                <div class="image slideshow"><img src="images/pose/4_config.gif" alt="" /></div>
-                                <div class="image slideshow"><img src="images/pose/5_config.gif" alt="" /></div>
-                                <div class="image slideshow"><img src="images/pose/6_config.gif" alt="" /></div>
-                                <div class="image slideshow"><img src="images/pose/10_config.gif" alt="" /></div>
-
-                                <a class="prev" onclick="carousel.plusSlides(-1)">&#10094;</a>
-                                <a class="next" onclick="carousel.plusSlides(1)">&#10095;</a>
+                        <div class="slideshow-wrapper">
+                            <div class="slideshow-container" id="clamp-slideshow">
+                                <div class="image slide"><img src="images/pose/3_config.gif" alt="" /></div>
+                                <div class="image slide"><img src="images/pose/4_config.gif" alt="" /></div>
+                                <div class="image slide"><img src="images/pose/5_config.gif" alt="" /></div>
+                                <div class="image slide"><img src="images/pose/6_config.gif" alt="" /></div>
+                                <div class="image slide"><img src="images/pose/10_config.gif" alt="" /></div>
                             </div>
 
                             <!-- The dots/circles -->
-                            <div style="text-align:center">
-                              <span class="dot" onclick="carousel.currentSlide(1)"></span>
-                              <span class="dot" onclick="carousel.currentSlide(2)"></span>
-                              <span class="dot" onclick="carousel.currentSlide(3)"></span>
-                              <span class="dot" onclick="carousel.currentSlide(4)"></span>
-                              <span class="dot" onclick="carousel.currentSlide(5)"></span>
-                            </div>
+                            <div class="dots-container" id="clamp-slideshow-selector"></div>
                         </div>
 
                     </article>
@@ -200,10 +191,10 @@
         <script src="../../assets/js/jquery.min.js"></script>
         <script src="../../assets/js/carousel.js"></script>
         <script>
-            var carousel = new Carousel();
+            var carousel = new Carousel("clamp-slideshow", "clamp-slideshow-selector");
 
             (function($) {
-                carousel.carousel(1);
+                carousel.start();
             })(jQuery);
         </script>
 
