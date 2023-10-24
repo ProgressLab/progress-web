@@ -68,6 +68,9 @@ class Carousel {
     $imgs.eq(this.slideIndex).addClass('active');
     $dots.eq(this.slideIndex).addClass('active');
 
-    this.timeout = setTimeout(() => this.updateCarousel(this.slideIndex + 1), this.switchTimeout); // Change image every 5 seconds
+    if (this.switchTimeout > 0) {
+      // Change image every switchTimeout seconds
+      this.timeout = setTimeout(() => this.updateCarousel(this.slideIndex + 1), this.switchTimeout);
+    }
   }
 }
