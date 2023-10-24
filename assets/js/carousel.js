@@ -1,49 +1,76 @@
 /*
-	Dopetrope by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Carousel.
 */
 
-var slideIndex = 1;
-var timeout;
-const SWITCH_DEFAULT = 5000;  // milliseconds
+class Carousel {
+  constructor(div_id = "slideshow", dot_id = "slideshow-selector", switchTimeout = 5000) {
+    this.slideIndex = 1;
+    this.timeout = null;
+    this.div_id = div_id;
+    this.dot_id = dot_id;
 
-// Next/previous controls
-function plusSlides(n) {
-  clearTimeout(timeout);
-  slideIndex += n;
-  carousel(slideIndex);
-}
+    this.switchTimeout = switchTimeout;
 
-// Thumbnail image controls
-function currentSlide(n) {
-	clearTimeout(timeout);
-	slideIndex = n;
-  carousel(slideIndex);
-}
+    var $imgs = $('#' + this.div_id + ' .slide');
 
-function carousel(n, switchTimeout = SWITCH_DEFAULT) {
-  var i;
-  var x = document.getElementsByClassName("slideshow");
-  var dots = document.getElementsByClassName("dot");
-  if (x.length === 0) {
-  	return;
+    // Add dots for selection.
+    $imgs.each((index) => {
+      var $span = $('<span>');
+      $span.addClass('dot')
+      if(index === 0) { $span.addClass('active'); }
+      $span.click(() => {
+        clearTimeout(this.timeout);
+        this.updateCarousel(index);
+      });
+      $('#' + this.dot_id).append($span);
+    });
+
+    // Add the arrows.
+    var $prev = $('<a>').text('\u2770');
+    $prev.addClass('prev');
+    $prev.click(() => {
+      this.plusSlides(-1);  // Decrease the slide count on click.
+    });
+    $('#' + this.div_id).append($prev);
+
+    var $next = $('<a>').text('\u2771');
+    $next.addClass('next');
+    $next.click(() => {
+      this.plusSlides(1);  // Increase the slide count on click.
+    });
+    $('#' + this.div_id).append($next);
   }
 
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  start() {
+    this.updateCarousel(0);
   }
 
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  // Add the desired quantity to the index.
+  plusSlides(n) {
+    clearTimeout(this.timeout);
+    this.slideIndex += n;
+    this.updateCarousel(this.slideIndex);
   }
 
-  slideIndex = n;
-  if (slideIndex > x.length) { slideIndex = 1; }
-  if (slideIndex < 1) { slideIndex = x.length; }
+  updateCarousel(n) {
+    var $imgs = $('#' + this.div_id + ' .slide');
+    var $dots = $('#' + this.dot_id + ' .dot');
+    if ($imgs.length === 0) {
+    	return;
+    }
 
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+    this.slideIndex = n;
+    if (this.slideIndex >= $imgs.length) { this.slideIndex = 0; }
+    if (this.slideIndex < 0) { this.slideIndex = $imgs.length - 1; }
 
-  timeout = setTimeout(function(){ carousel(slideIndex + 1) }, switchTimeout); // Change image every 5 seconds
+    $imgs.removeClass('active');
+    $dots.removeClass('active');
+    $imgs.eq(this.slideIndex).addClass('active');
+    $dots.eq(this.slideIndex).addClass('active');
+
+    if (this.switchTimeout > 0) {
+      // Change image every switchTimeout seconds
+      this.timeout = setTimeout(() => this.updateCarousel(this.slideIndex + 1), this.switchTimeout);
+    }
+  }
 }

@@ -29,7 +29,7 @@
                     <article class="box post project">
                         <!-- TITLE -->
                         <header>
-                            <h2>Stein Variational Belief Propagation for <br/> Decentralized Multi-Robot Control</h2>
+                            <h2>Stein Variational Belief Propagation for <br/> Multi-Robot Coordination</h2>
                         </header>
 
                         <!-- AUTHORS -->
@@ -40,22 +40,27 @@
                                 link if the author doesn't have one. The affiliation should be the institution the
                                 author belongs to, ie "University of Michigan."
                             -->
-                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                            <div class="col-4 col-4-large col-4-medium col-6-small project-author">
                                 <h3><a href="https://janapavlasek.com/">Jana Pavlasek</a></h3>
                                 <p>University of Michigan</p>
                             </div>
 
-                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                            <div class="col-4 col-4-large col-4-medium col-6-small project-author">
                                 <h3>Joshua Mah</h3>
                                 <p>University of Michigan</p>
                             </div>
 
-                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                            <div class="col-4 col-4-large col-4-medium col-6-small project-author">
+                                <h3>Ruihan Xu</h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-4 col-4-large col-4-medium col-6-small project-author">
                                 <h3><a href="https://web.eecs.umich.edu/~ocj/">Odest Chadwicke Jenkins</a></h3>
                                 <p>University of Michigan</p>
                             </div>
 
-                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                            <div class="col-4 col-4-large col-4-medium col-6-small project-author">
                                 <h3><a href="https://fabioramos.github.io/">Fabio Ramos</a></h3>
                                 <p>NVIDIA Corporation <br/> University of Sydney </p>
                             </div>
@@ -86,7 +91,7 @@
                              class "paperlinks" below. Include whatever links are relevant.-->
                         <div class="paperlinks">
                             <p>
-                                <a href="https://openreview.net/pdf?id=fDsqkXx1Ild"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Paper</a>&nbsp;&nbsp;
+                                <a href="https://openreview.net/pdf?id=fDsqkXx1Ild"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Workshop Paper</a>&nbsp;&nbsp;
                                 <!-- Optional. -->
                                 <!-- <a href="#"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Talk</a>&nbsp;&nbsp; -->
                                 <!-- <a href="#"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp; -->
@@ -98,104 +103,209 @@
 
                     <article class="box post">
                         <header>
-                            <h2>Experiments</h2>
+                            <h2>Multi-Robot Perception</h2>
                         </header>
 
-                        <p>This page contains animated results to supplement the experiments presented in the paper "Stein Variational Belief Propagation for Decentralized Multi-Robot Control."</p>
-
-                        <h3>Multi-Robot Perception</h3>
-                        <div class="row aln-center exp-grid">
-                            <div class="col-5 col-title">
-                                <p>SVBP (Ours)</p>
-                            </div>
-                            <div class="col-5 col-title">
-                                <p>Particle Belief Propagation (Baseline)</p>
-                            </div>
-                        </div>
+                        <p style="margin-bottom: 1em;">We implement our SVBP on a graph problem simulating perception under challenging noise conditions. The goal is to localize each node in the "spider" where the observation is the multi-modal Gaussian shown in the video.</p>
 
                         <div class="row aln-center exp-grid">
-                            <div class="col-5">
+                            <div class="col-5 col-5-large col-5-medium col-8-small">
+                                <p style="text-align: center; margin: 0;"><b>SVBP (Ours)</b></p>
                                 <div class="image experiment centered">
-                                    <img src="images/exp/spider_svbp.gif" alt="" />
+                                    <img src="images/exp/spider/sbp_50_spider_30_1.gif" alt="" />
                                 </div>
                             </div>
-                            <div class="col-5">
+                            <div class="col-5 col-5-large col-5-medium col-8-small">
+                                <p style="text-align: center; margin: 0;"><b>Particle Belief Propagation</b></p>
                                 <div class="image experiment centered">
-                                    <img src="images/exp/spider_pbp.gif" alt="" />
-                                </div>
-                            </div>
-                        </div>
- 
-                        <h3>Multi-Robot Control</h3>
-
-
-                        <div class="row aln-center exp-grid">
-                            <div class="col-4 col-title">
-                                <p>SVBP (Ours)</p>
-                            </div>
-                            <div class="col-4 col-title">
-                                <p>ORCA, 20 cm</p>
-                            </div>
-                            <div class="col-4 col-title">
-                                <p>ORCA, 40 cm</p>
-                            </div>
-                        </div>
-
-                            <!-- ROW -->
-                        <div class="row aln-center exp-grid">
-                            <div class="col-4">
-                                <div class="image experiment centered">
-                                    <img src="images/exp/svbp_swarm_3x3.gif" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="image experiment centered">
-                                    <img src="images/exp/orca_swarm_3x3_20cm.gif" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="image experiment centered">
-                                    <img src="images/exp/orca_swarm_3x3_40cm.gif" alt="" />
+                                    <img src="images/exp/spider/pbp_nodes_50_spider_30_1.gif" alt="" />
                                 </div>
                             </div>
                         </div>
 
+                        <p style="margin-top: 1em;">SVBP maintains modes of the distribution more effectively than Particle Belief Propagation, which relies on importance sampling.</p>
+
+                    </article>
+
+                    <article class="box post">
+                        <header id="planning">
+                            <h2>Multi-Robot Planning</h2>
+                        </header>
+
+                        <p>We apply SVBP to the multi-robot planning problem. Below are video results for each scene in the dataset.</p>
+
                         <div class="row aln-center exp-grid">
-                            <div class="col-4">
+                            <div class="col-4 col-4-large col-5-medium col-8-small">
                                 <div class="image experiment centered">
-                                    <img src="images/exp/svbp_swarm_2x2.gif" alt="" />
+                                    <video controls>
+                                        <source src="images/exp/planar/svbp/svbp_swap_rooms_0.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 col-4-large col-5-medium col-8-small">
                                 <div class="image experiment centered">
-                                    <img src="images/exp/orca_swarm_2x2_20cm.gif" alt="" />
+                                    <video controls>
+                                        <source src="images/exp/planar/svbp/svbp_obstacles_mix_circle_0.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 col-4-large col-5-medium col-8-small">
                                 <div class="image experiment centered">
-                                    <img src="images/exp/orca_swarm_2x2_40cm.gif" alt="" />
+                                    <video controls>
+                                        <source src="images/exp/planar/svbp/svbp_squares_3x3_cross_0.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-4 col-4-large col-5-medium col-8-small">
+                                <div class="image experiment centered">
+                                    <video controls>
+                                        <source src="images/exp/planar/svbp/svbp_squares_swap_0.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-4 col-4-large col-5-medium col-8-small">
+                                <div class="image experiment centered">
+                                    <video controls>
+                                        <source src="images/exp/planar/svbp/svbp_end_of_lessons_0.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row aln-center exp-grid">
-                            <div class="col-4">
-                                <div class="image experiment centered">
-                                    <img src="images/exp/svbp_swarm_swap.gif" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="image experiment centered">
-                                    <img src="images/exp/orca_swarm_swap_20cm.gif" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="image experiment centered">
-                                    <img src="images/exp/orca_swarm_swap_40cm.gif" alt="" />
-                                </div>
-                            </div>
-                        </div>
+                        <h3>Baselines</h3>
 
+                        <p>We implement different baselines to compare our algorithm. Click through the examples for each below.</p>
+
+                        <div class="row aln-center">
+                            <div class="col-5 col-5-large col-5-medium col-8-small project-author">
+                                <div class="slideshow-wrapper">
+                                    <div class="slideshow-container" id="gabp-mpc-slideshow">
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/gabp/gabp_swap_rooms_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/gabp/gabp_obstacles_mix_circle_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/gabp/gabp_squares_3x3_cross_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/gabp/gabp_squares_swap_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/gabp/gabp_end_of_lessons_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+
+                                    <!-- The dots/circles -->
+                                    <div class="dots-container" id="gabp-mpc-slideshow-selector"></div>
+                                </div>
+                              <h3>Gaussian Belief Propagation</h3>
+                              <p>A version of our algorithm with a Gaussian trajectory distribution instead of a nonparametric one. The GaBP baseline is more likely to fall into local minima.</p>
+                            </div>
+                            <div class="col-5 col-5-large col-5-medium col-8-small project-author">
+                                <div class="slideshow-wrapper">
+                                    <div class="slideshow-container" id="orca2-mpc-slideshow">
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/orca/orca_2_swap_rooms_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/orca/orca_2_obstacles_mix_circle_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/orca/orca_2_squares_3x3_cross_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/orca/orca_2_squares_swap_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/gabp/gabp_end_of_lessons_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+
+                                    <!-- The dots/circles -->
+                                    <div class="dots-container" id="orca2-mpc-slideshow-selector"></div>
+                                </div>
+                              <h3>ORCA (20 cm radius)</h3>
+                              <p>The popular ORCA method (van den Berg 2011) is efficient but not as smooth as SVBP and prone to deadlock.</p>
+                            </div>
+                            <div class="col-5 col-5-large col-5-medium col-8-small project-author">
+                                <div class="slideshow-wrapper">
+                                    <div class="slideshow-container" id="orca4-mpc-slideshow">
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/orca/orca_2_swap_rooms_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/orca/orca_2_obstacles_mix_circle_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/orca/orca_2_squares_3x3_cross_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/orca/orca_2_squares_swap_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <div class="image slide">
+                                            <video controls>
+                                                <source src="images/exp/planar/gabp/gabp_end_of_lessons_0.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+
+                                    <!-- The dots/circles -->
+                                    <div class="dots-container" id="orca4-mpc-slideshow-selector"></div>
+                                </div>
+                              <h3>ORCA (40 cm radius)</h3>
+                              <p>When ORCA must maintain a slightly larger collision radius around the robots, the deadlock scenarios become increasingly apparent.</p>
+                            </div>
+                          </div>
                     </article>
 
                     <!-- <article class="box post">
@@ -229,6 +339,21 @@
             </section>
 
         </div>
+
+        <!-- Scripts -->
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/carousel.js"></script>
+        <script>
+            var gabpCarousel = new Carousel("gabp-mpc-slideshow", "gabp-mpc-slideshow-selector", -1);
+            var orca2Carousel = new Carousel("orca2-mpc-slideshow", "orca2-mpc-slideshow-selector", -1);
+            var orca4Carousel = new Carousel("orca4-mpc-slideshow", "orca4-mpc-slideshow-selector", -1);
+
+            (function($) {
+                gabpCarousel.start();
+                orca2Carousel.start();
+                orca4Carousel.start();
+            })(jQuery);
+        </script>
 
     </body>
 </html>
