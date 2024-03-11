@@ -2379,6 +2379,16 @@ li:hover a {
 				display: block;
 			}
 
+		/* Project Pages */
+
+		.project > .abstract {
+			width: 100%;
+		}
+
+		.project > .paperlinks {
+			width: 100%;
+		}
+
 	}
 
 /* Small */
