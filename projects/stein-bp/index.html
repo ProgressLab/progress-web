@@ -93,11 +93,11 @@
                             <p>
                                 <a href="https://arxiv.org/abs/2311.16916"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Preprint</a>&nbsp;&nbsp;
                                 <a href="https://youtu.be/buRdZnahwBc"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a>&nbsp;&nbsp;
-                                <a href="https://openreview.net/pdf?id=fDsqkXx1Ild"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Workshop Paper</a>&nbsp;&nbsp;
+                                <!-- <a href="https://openreview.net/pdf?id=fDsqkXx1Ild"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Workshop Paper</a>&nbsp;&nbsp; -->
                                 <!-- Optional. -->
                                 <!-- <a href="#"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Talk</a>&nbsp;&nbsp; -->
-                                <!-- <a href="#"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp; -->
-                                <!-- <a href="#cite"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a> -->
+                                <a href="https://github.com/janapavlasek/multi-robot-svbp"><i class="fab fa-github"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp;
+                                <a href="#cite"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a>
                             </p>
                         </div>
 
@@ -108,19 +108,19 @@
                             <h2>Multi-Robot Perception</h2>
                         </header>
 
-                        <p style="margin-bottom: 1em;">We implement our SVBP on a graph problem simulating perception under challenging noise conditions. The goal is to localize each node in the "spider" where the observation is the multi-modal Gaussian shown in the video.</p>
+                        <p style="margin-bottom: 1em;">We implement our SVBP on a graph problem simulating multi-robot perception under challenging noise conditions. The goal is to localize each robot given the displacement between neighboring robots and a the multi-modal Gaussian observation shown in the video.</p>
 
                         <div class="row aln-center exp-grid">
-                            <div class="col-5 col-5-large col-5-medium col-8-small">
+                            <div class="col-5 col-5-large col-6-medium col-12-small">
                                 <p style="text-align: center; margin: 0;"><b>SVBP (Ours)</b></p>
                                 <div class="image experiment centered">
-                                    <img src="images/exp/spider/sbp_50_spider_30_1.gif" alt="" />
+                                    <img src="images/exp/multi-loc/sbp_50_robots_30_3.gif" alt="" />
                                 </div>
                             </div>
-                            <div class="col-5 col-5-large col-5-medium col-8-small">
+                            <div class="col-5 col-5-large col-6-medium col-12-small">
                                 <p style="text-align: center; margin: 0;"><b>Particle Belief Propagation</b></p>
                                 <div class="image experiment centered">
-                                    <img src="images/exp/spider/pbp_nodes_50_spider_30_1.gif" alt="" />
+                                    <img src="images/exp/multi-loc/pbp_nodes_50_robots_30_3.gif" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                         <p>We apply SVBP to the multi-robot planning problem. Below are video results for each scene in the dataset.</p>
 
                         <div class="row aln-center exp-grid">
-                            <div class="col-4 col-4-large col-5-medium col-8-small">
+                            <div class="col-4 col-4-large col-6-medium col-12-small">
                                 <div class="image experiment centered">
                                     <video controls>
                                         <source src="images/exp/planar/svbp/svbp_swap_rooms_0.mp4" type="video/mp4">
@@ -145,7 +145,7 @@
                                     </video>
                                 </div>
                             </div>
-                            <div class="col-4 col-4-large col-5-medium col-8-small">
+                            <div class="col-4 col-4-large col-6-medium col-12-small">
                                 <div class="image experiment centered">
                                     <video controls>
                                         <source src="images/exp/planar/svbp/svbp_obstacles_mix_circle_0.mp4" type="video/mp4">
@@ -153,7 +153,7 @@
                                     </video>
                                 </div>
                             </div>
-                            <div class="col-4 col-4-large col-5-medium col-8-small">
+                            <div class="col-4 col-4-large col-6-medium col-12-small">
                                 <div class="image experiment centered">
                                     <video controls>
                                         <source src="images/exp/planar/svbp/svbp_squares_3x3_cross_0.mp4" type="video/mp4">
@@ -161,7 +161,7 @@
                                     </video>
                                 </div>
                             </div>
-                            <div class="col-4 col-4-large col-5-medium col-8-small">
+                            <div class="col-4 col-4-large col-6-medium col-12-small">
                                 <div class="image experiment centered">
                                     <video controls>
                                         <source src="images/exp/planar/svbp/svbp_squares_swap_0.mp4" type="video/mp4">
@@ -169,7 +169,7 @@
                                     </video>
                                 </div>
                             </div>
-                            <div class="col-4 col-4-large col-5-medium col-8-small">
+                            <div class="col-4 col-4-large col-6-medium col-12-small">
                                 <div class="image experiment centered">
                                     <video controls>
                                         <source src="images/exp/planar/svbp/svbp_end_of_lessons_0.mp4" type="video/mp4">
@@ -184,7 +184,7 @@
                         <p>We implement different baselines to compare our algorithm. Click through the examples for each below.</p>
 
                         <div class="row aln-center">
-                            <div class="col-5 col-5-large col-5-medium col-8-small project-author">
+                            <div class="col-5 col-5-large col-6-medium col-12-small project-author">
                                 <div class="slideshow-wrapper">
                                     <div class="slideshow-container" id="gabp-mpc-slideshow">
                                         <div class="image slide">
@@ -225,7 +225,7 @@
                               <h3>Gaussian Belief Propagation</h3>
                               <p>A version of our algorithm with a Gaussian trajectory distribution instead of a nonparametric one. The GaBP baseline is more likely to fall into local minima.</p>
                             </div>
-                            <div class="col-5 col-5-large col-5-medium col-8-small project-author">
+                            <div class="col-5 col-5-large col-6-medium col-12-small project-author">
                                 <div class="slideshow-wrapper">
                                     <div class="slideshow-container" id="orca2-mpc-slideshow">
                                         <div class="image slide">
@@ -266,7 +266,7 @@
                               <h3>ORCA (20 cm radius)</h3>
                               <p>The popular ORCA method (van den Berg 2011) is efficient but not as smooth as SVBP and prone to deadlock.</p>
                             </div>
-                            <div class="col-5 col-5-large col-5-medium col-8-small project-author">
+                            <div class="col-5 col-5-large col-6-medium col-12-small project-author">
                                 <div class="slideshow-wrapper">
                                     <div class="slideshow-container" id="orca4-mpc-slideshow">
                                         <div class="image slide">
@@ -310,20 +310,21 @@
                           </div>
                     </article>
 
-                    <!-- <article class="box post">
+                    <article class="box post">
                         <header id="cite">
                             <h2>Citation</h2>
                         </header>
 
-                        The whitespace between <pre> tags will be preserved exactly how it is in the code.
+                        <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
                         <div class="citation">
-<pre><code>@inproceedings{pavlasek2023svbp,
-  author = {Last, First and Last, First and ...},
-  title = {Paper title},
-  year = {2020}
+<pre><code>@inproceedings{pavlasek2024stein,
+    title={Stein Variational Belief Propagation for Multi-Robot Coordination},
+    author={Pavlasek, Jana and Mah, Joshua Jing Zhi and Xu, Ruihan and Jenkins, Odest Chadwicke and Ramos, Fabio},
+    booktitle={Robotics and Automation Letters (RA-L)},
+    year={2024}
 }</code></pre>
                         </div>
-                    </article> -->
+                    </article>
 
                 </div>
             </section>
@@ -333,7 +334,7 @@
                 <!-- Copyright -->
                 <div id="copyright">
                     <ul class="links">
-                        <li>&copy; 2023. All rights reserved.</li><li>Design: Dopetrope by
+                        <li>&copy; 2024. All rights reserved.</li><li>Design: Dopetrope by
                     <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
                     </ul>
                 </div>
