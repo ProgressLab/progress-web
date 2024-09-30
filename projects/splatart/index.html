@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+    Dopetrope by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Laboratory for Progress</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+        <link rel="shortcut icon" type="image/png" href="../../images/logo/LFP_logo_final_JustHand_Blue.png"/>
+
+    </head>
+    <body class="homepage is-preload">
+        <div id="page-wrapper">
+
+            <section id="header">
+                <!-- Logo -->
+                <div class="logo"><a href="https://progress.eecs.umich.edu/"><img src="../../images/logo/two_tone_standard.svg" alt="" /></a></div>
+            </section>
+
+            <section id="main">
+                <div class="container">
+
+                    <!-- Content -->
+                    <article class="box post project">
+                        <!-- TITLE -->
+                        <header>
+                            <h2>SPLATART24: Articulated Gaussian Splatting with Estimated Object Structure</h2>
+                        </header>
+
+                        <!-- AUTHORS -->
+                        <div class="row aln-center project-authors">
+                            <!-- Add a div entry exactly as below for each author (keep all classes).
+
+                                The link belonging to the author name should point to the author's webpage. Remove the
+                                link if the author doesn't have one. The affiliation should be the institution the
+                                author belongs to, ie "University of Michigan."
+                            -->
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="http://stanlew.com/">Stanley Lewis</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="tomgao.net">Tom Gao</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="vishalchandra.com">Vishal Chandra</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+
+                            <div class="col-3 col-4-large col-4-medium col-6-small project-author">
+                                <h3><a href="https://web.eecs.umich.edu/~ocj/">Odest Chadwicke Jenkins</a></h3>
+                                <p>University of Michigan</p>
+                            </div>
+                        </div>
+
+                        <!-- Path to a pitch image. Can be removed if not needed.
+
+                            If you have images to include on this webpage, you should make a subfolder called "images"
+                            in your project page folder. Then the (relative) path would look like: "images/MY_IMG.png".
+
+                            By default, this image will not take up the whole box, which is more aesthetic. If your
+                            pitch figure is particularly long and you need it to fill the whole horizontal space,
+                            remove the "pitch" class.
+                        -->
+                        <div class="image pitch centered"><img src="images/pitch_fig.png" alt="pitch figure for SPLATART24 project" /></div>
+                        <div class="centered">
+                            <img src="images/blade.gif" width="19%"/>
+                            <img src="images/foldchair.gif" width="19%"/>
+                            <img src="images/fridge.gif" width="19%"/>
+                            <img src="images/laptop.gif" width="19%"/>
+                            <img src="images/oven.gif" width="19%"/>
+                            <img src="images/storage.gif" width="19%"/>
+                            <img src="images/scissors.gif" width="19%"/>
+                            <img src="images/stapler.gif" width="19%"/>
+                            <img src="images/usb.gif" width="19%"/>
+                            <img src="images/washer.gif" width="19%"/>
+                        </div>
+
+                        <!-- ABSTRACT -->
+                        <!-- If your pitch figure is wide and you want the abstract to match, add the class "wide" next
+                             to the class "abstract" below.-->
+                        <div class="abstract">
+                            <p>
+                                It is a common problem for robots on how to best represent articulated objects. Articulated objects such as pliers, clamps, or cabinets require representations that are capable of capturing not only the observed geometry and color information, but also part connectivity, joint paramaterization, and overall kinematic structure. In this work, we present SPLATART24 - a method for determining a common representation for tree structured articulated objects conditioned on segmented image and camera pose inputs based on Gaussian Splats. SPLATART24 takes a parts-based approach in which the observed articulated object is first decomposed into constituent rigid body objects, which are then registered against each other across different configuration observations. These pose estimates are then used to estimate the connectivity and joint parameters between each part. Finally, this inferred structure can be used to render the object in novel poses and configurations. In this work, we present data on the SPLATART24 pipeline as applied to the synthetic Paris dataset objects, as well as qualitative results on real world objects to demonstrate the capabilities of the parts-based approach.
+                            </p>
+                        </div>
+
+                        <!-- PAPER LINKS -->
+                        <!-- If your pitch figure and abstract are wide, also add the the class "wide" next to the
+                             class "paperlinks" below. Include whatever links are relevant.-->
+                        <div class="paperlinks">
+                            <p>
+                                <a href="#"><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Paper</a>&nbsp;&nbsp;
+                                <!-- Optional. -->
+                                <a href="#"><i class="fas fa-chalkboard-teacher"></i>&nbsp;&nbsp;Talk</a>&nbsp;&nbsp;
+                                <a href="#"><i class="fas fa-code"></i>&nbsp;&nbsp;Code</a>&nbsp;&nbsp;
+                                <a href="#cite"><i class="fas fa-quote-right"></i>&nbsp;&nbsp;Cite</a>
+                            </p>
+                        </div>
+
+                    </article>
+
+                    <article class="box post">
+                        <header>
+                            <h2>Video</h2>
+                        </header>
+
+                        <!-- Link to video on YouTube. -->
+                        <!-- To get your video link, go to your video and click "Share" -> "Embed" to get this iframe.
+                             You can remove width and height. -->
+                        <div class="video-container">
+                            <iframe class="video" src="https://www.youtube.com/watch?v=J3c-ARfvcOc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </article>
+
+                    <article class="box post">
+                        <header id="cite">
+                            <h2>Citation</h2>
+                        </header>
+
+                        <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
+                        <div class="citation">
+<pre><code>@inproceedings{tag,
+  author = {Lewis, Stanley and Gao, Tom and Chandra, Vishal and Jenkins, Odest Chadwicke},
+  title = {SPLATART24: Articulated Gaussian Splatting with Estimated Object Structure},
+  year = {2024},
+  ...
+}</code></pre>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="footer">
+
+                <!-- Copyright -->
+                <div id="copyright">
+                    <ul class="links">
+                        <li>&copy; 2024. All rights reserved.</li><li>Design: Dopetrope by
+                    <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+
+    </body>
+</html>
