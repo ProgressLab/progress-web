@@ -28,7 +28,7 @@
                     <article class="box post project">
                         <!-- TITLE -->
                         <header>
-                            <h2>SPLATART24: Articulated Gaussian Splatting with Estimated Object Structure</h2>
+                            <h2>SPLATART: Articulated Gaussian Splatting with Estimated Object Structure</h2>
                         </header>
 
                         <!-- AUTHORS -->
@@ -69,7 +69,7 @@
                             pitch figure is particularly long and you need it to fill the whole horizontal space,
                             remove the "pitch" class.
                         -->
-                        <div class="image pitch centered"><img src="images/pitch_fig.png" alt="pitch figure for SPLATART24 project" /></div>
+                        <div class="image pitch centered"><img src="images/pitch_fig.png" alt="pitch figure for SPLATART project" /></div>
                         <div class="centered">
                             <img src="images/blade.gif" width="19%"/>
                             <img src="images/foldchair.gif" width="19%"/>
@@ -88,8 +88,15 @@
                              to the class "abstract" below.-->
                         <div class="abstract">
                             <p>
-                                It is a common problem for robots on how to best represent articulated objects. Articulated objects such as pliers, clamps, or cabinets require representations that are capable of capturing not only the observed geometry and color information, but also part connectivity, joint paramaterization, and overall kinematic structure. In this work, we present SPLATART24 - a method for determining a common representation for tree structured articulated objects conditioned on segmented image and camera pose inputs based on Gaussian Splats. SPLATART24 takes a parts-based approach in which the observed articulated object is first decomposed into constituent rigid body objects, which are then registered against each other across different configuration observations. These pose estimates are then used to estimate the connectivity and joint parameters between each part. Finally, this inferred structure can be used to render the object in novel poses and configurations. In this work, we present data on the SPLATART24 pipeline as applied to the synthetic Paris dataset objects, as well as qualitative results on real world objects to demonstrate the capabilities of the parts-based approach.
+                                It is a common problem for robots on how to best represent articulated objects. Articulated objects such as pliers, clamps, or cabinets require representations that are capable of capturing not only the observed geometry and color information, but also part connectivity, joint paramaterization, and overall kinematic structure. In this work, we present SPLATART - a method for determining a common representation for tree structured articulated objects conditioned on segmented image and camera pose inputs based on Gaussian Splats. SPLATART takes a parts-based approach in which the observed articulated object is first decomposed into constituent rigid body objects, which are then registered against each other across different configuration observations. These pose estimates are then used to estimate the connectivity and joint parameters between each part. Finally, this inferred structure can be used to render the object in novel poses and configurations. In this work, we present data on the SPLATART pipeline as applied to the synthetic Paris dataset objects, as well as qualitative results on real world objects to demonstrate the capabilities of the parts-based approach.
                             </p>
+                        </div>
+
+                        <div class="centered">
+                            <img src="images/panda_0.gif" width="24%"/>
+                            <img src="images/panda_1.gif" width="24%"/>
+                            <img src="images/panda_2.gif" width="24%"/>
+                            <img src="images/panda_3.gif" width="24%"/>
                         </div>
 
                         <!-- PAPER LINKS -->
@@ -116,7 +123,7 @@
                         <!-- To get your video link, go to your video and click "Share" -> "Embed" to get this iframe.
                              You can remove width and height. -->
                         <div class="video-container">
-                            <iframe class="video" src="https://www.youtube.com/embed/J3c-ARfvcOc?si=ZJcc9pNgkOlVZpO9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="video" src="https://www.youtube.com/embed/DNyoxaAsfdM?si=liFAkB0K4YsBvW1T" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </article>
 
@@ -127,12 +134,11 @@
 
                         <!-- The whitespace between <pre> tags will be preserved exactly how it is in the code. -->
                         <div class="citation">
-<pre><code>@inproceedings{tag,
+<pre><code>@article{lewis2025splatart,
   author = {Lewis, Stanley and Gao, Tom and Chandra, Vishal and Jenkins, Odest Chadwicke},
-  title = {SPLATART24: Articulated Gaussian Splatting with Estimated Object Structure},
-  year = {2024},
-  ...
-}</code></pre>
+  title = {SPLATART: Articulated Gaussian Splatting with Estimated Object Structure},
+  year = {2025}
+  journal={International Conference on Intelligent Robots and Systems (IROS)}}</code></pre>
                         </div>
                     </article>
 
@@ -144,7 +150,7 @@
                 <!-- Copyright -->
                 <div id="copyright">
                     <ul class="links">
-                        <li>&copy; 2024. All rights reserved.</li><li>Design: Dopetrope by
+                        <li>&copy; 2025. All rights reserved.</li><li>Design: Dopetrope by
                     <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</li>
                     </ul>
                 </div>
